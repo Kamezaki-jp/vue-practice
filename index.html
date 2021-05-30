@@ -7,8 +7,13 @@
   <title>Vue</title>
 </head>
 <body>
+  <!-- テンプレート構文 -->
+  <!-- HTMLではなくテンプレートを書いている
+  テンプレートからHTMLを生成している -->
   <div id="app">
     <p>{{message}}</p>
+    <p>{{number + 5}}</p>
+    <p>{{ ok ? 'Yes' : 'No'}}</p>
     <button v-on:click="reverseMessage">メッセージ反転</button>
   </div>
 
