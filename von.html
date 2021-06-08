@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <div id="app">
+    <!-- v-onディレクティブ クリックなどのイベント時に使用する -->
+    <p>現在、{{ number }}回クリックされています。</p>
+    <!-- 処理をこの中に書くのはナンセンス -->
+    <button v-on:click="number += 1">クリック</button>
+    <button v-on:click="countUp">クリック</button>
+  </div>
+
+  <script src="von.js"></script>
+</body>
+</html>
