@@ -13,6 +13,11 @@
     <a v-bind:href="url">Google</a>
     <!-- v-bindは省略できる -->
     <a :href="url">Google</a>
+    <a :[attribute]="url">Google</a>
+    <a :href="urlTwitter" :id="number">Twitter</a>
+    <!-- v-bind="{}"でオブジェクト化 -->
+    <a v-bind="{href: urlTwitter, id: number}">Twitter</a>
+    <a v-bind="twitterObject">twitterObject</a>
   </div>
 
   <script src="vbind.js"></script>
