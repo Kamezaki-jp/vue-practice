@@ -16,6 +16,9 @@ new Vue ({
     noEvent: function(event) {
       // デフォルトの挙動を動作させない
       event.preventDefault();
+    },
+    myAlert() {
+      alert('Alert!');
     }
   }
 })

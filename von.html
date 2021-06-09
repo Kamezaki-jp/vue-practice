@@ -19,8 +19,13 @@
     <p v-on:mousemove="changeMousePosition">カーソルを載せてください。<span v-on:mousemove.stop.prevent>ここは反応しない。</span></p>
     <p>X: {{x}}, Y:{{y}}</p>
 
+    <!-- イベント修飾子 -->
     <a v-on:click="noEvent" href="https://google.com">Google</a>
     <a v-on:click.prevent href="https://google.com">Google</a>
+
+    <!-- キー修飾子 -->
+    <input type="text" v-on:keyup.enter="myAlert">
+    <input type="text" v-on:keyup.space="myAlert">
   </div>
 
   <script src="von.js"></script>
