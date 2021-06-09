@@ -12,6 +12,10 @@ new Vue ({
     changeMousePosition: function(event) {
       this.x = event.clientX;
       this.y = event.clientY;
+    },
+    noEvent: function(event) {
+      // デフォルトの挙動を動作させない
+      event.preventDefault();
     }
   }
 })
