@@ -2,6 +2,7 @@ new Vue ({
   el: '#app',
   data: {
     number: 0,
+    event: 'click',
     x: 0,
     y: 0,
   },
