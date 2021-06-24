@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue</title>
+  <link rel="stylesheet" href="bind.css">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  
+  <div id="app">
+    <!-- v-ifは要素ごと消える。 -->
+    <!-- v-showはdisplay:noneで消える -->
+
+    <!-- v-show デメリット -->
+    <!-- templateが使えない -->
+    <!-- v-else-if みないなやつがない -->
+
+    <!-- v-ifデメリット -->
+    <!-- 頻繁に切り替える時にコストがかかる(要素を都度、追加や削除するから) -->
+
+    <!-- 頻繁に切り替えるときは、v-show -->
+    <!-- 実行時に変わらない場合、v-if -->
+    
+    <button @click="ok = !ok">ボタン</button>
+    <p v-if="ok">Hello</p>
+    <p v-show="ok">Show</p>
+  </div>
+
+  <script src="template.js"></script>
+</body>
+</html>
