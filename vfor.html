@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue</title>
+  <link rel="stylesheet" href="bind.css">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  
+  <div id="app">
+    <!-- 配列をv-forで扱う -->
+    <ul>
+      <!-- v-for = "単数形 in 複数形" -->
+      <!-- <li v-for="fruit in fruits">{{fruit}}</li> -->
+      <li v-for="(fruit, index) in fruits">({{index}}){{fruit}}</li>
+    </ul>
+
+    <!--  オブジェクトをv-forで扱う--> 
+    <ul>
+      <li v-for="(value, key, index) in object">{{index}} - {{key}} - {{value}}</li>
+    </ul>
+
+    <!-- templateタグを用いる -->
+    <ul>
+      <template v-for="fruit in fruits">
+        <li>{{fruit}}</li>
+        <hr>
+      </template>
+    </ul>
+
+    <!-- v-for " n in 整数値" -->
+    <ul>
+      <li v-for="n in 10">{{n}}</li>
+    </ul>
+
+    <!-- v-for を使うときは 必ずkey属性を使おう -->
+    <!-- 効率よくレンダリングするアルゴリズムを使っている。
+    inputタグは再描画する必要がないので、りんご->バナナ、バナナ -> ぶどう　という感じでレンダリングしている -->
+    
+    <!-- v-bind:keyを使用するときの注意点 -->
+    <!-- templateは使えない -->
+    <!-- indexは使わない。配列の番号が変わることがある -->
+    
+    <ul>
+      <div v-for="fruit in fruits" :key="fruit">
+        <p>{{fruit}}</p>
+        <input type="text">
+      </div>
+    </ul>
+    <button @click="remove">先頭を削除</button>
+
+  </div>
+
+  <script src="vfor.js"></script>
+</body>
+</html>
