@@ -21,6 +21,12 @@
 
   <div id="app3"></div>
 
+  <div id="app4">
+    <h1>こんにちは、{{ name }}</h1>
+    <button @click="name = 'たろう'">名前を変更</button>
+    <button @click="destroy">インスタンスを破壊</button>
+  </div>
+
   <script src="mount.js"></script>
 </body>
 </html>
