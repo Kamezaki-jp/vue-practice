@@ -3,6 +3,10 @@ var data = {
   name: 'よしぴー'
 }
 
+Vue.component('hello', {
+  template: '<p>こんにちは</p>'
+});
+
 var vm = new Vue({
   // el: '#app',
   data: data,
